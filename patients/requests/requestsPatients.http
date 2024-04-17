@@ -1,0 +1,39 @@
+###
+#Create a new patient
+POST http://localhost:8083/patients
+Content-Type: application/json
+
+{
+  "name": "test2",
+  "doctorId": "550e8400-e29b-41d4-a716-446655440032"
+}
+###
+###
+# Update an existing patient
+PUT http://localhost:8083/patients/
+Content-Type: application/json
+
+{
+  "name": "Updated Name",
+  "id": "550e8400-e29b-41d4-a716-446655440011"
+}
+###
+
+###
+# Delete a patient
+DELETE http://localhost:8083/patients/550e8400-e29b-41d4-a716-446655440012
+###
+
+# Get a single patient
+GET http://localhost:8083/patients/550e8400-e29b-41d4-a716-446655440010
+###
+
+###
+# Get a list of all patients
+GET http://localhost:8083/patients
+###
+
+###
+# Get a list of all patients from one doctor
+GET http://localhost:8083/patients/550e8400-e29b-41d4-a716-446655440002/patients
+###
