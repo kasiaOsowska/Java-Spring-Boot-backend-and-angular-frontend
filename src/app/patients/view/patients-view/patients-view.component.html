@@ -1,0 +1,14 @@
+<article *ngIf="patient">
+    <header><h2>{{patient.name}}</h2></header>
+  
+    <div class="container">
+      <div class="col-6">
+        Patient name    &amp; ID
+      </div>
+      <div class="col-6">
+        <span>{{patient.name}}        </span>
+        <span>{{patient.id}}</span>
+      </div>
+    </div>
+  </article>
+  <router-outlet></router-outlet>

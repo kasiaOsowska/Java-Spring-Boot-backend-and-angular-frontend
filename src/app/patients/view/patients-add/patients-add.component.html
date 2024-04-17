@@ -1,0 +1,23 @@
+<article *ngIf="patient">
+    <header><h2>Add patient</h2></header>
+  
+    <form class="container" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="col-4 p-2">
+          <div>
+            <label for="name">Name:</label>
+            <input id="name" name="name" [(ngModel)]="patient.name"/>
+            <label for="doctorId">doctorID:</label>
+            <input id="DoctorId" name="doctorId" [(ngModel)]="patient.doctorId"/>
+          </div>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-2 p-2">
+          <button type="submit">Add</button>
+        </div>
+      </div>
+    </form>
+  </article>
+  <router-outlet></router-outlet>
