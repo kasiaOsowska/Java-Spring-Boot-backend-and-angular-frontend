@@ -1,0 +1,21 @@
+<article *ngIf="patient">
+    <header><h2>Edit patient</h2></header>
+  
+    <form class="container" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="col-4 p-2">
+          <div>
+            <label for="name">Name:</label>
+            <input id="name" name="name" [(ngModel)]="patient.name"/>
+          </div>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-2 p-2">
+          <button type="submit">Update</button>
+        </div>
+      </div>
+    </form>
+  </article>
+  <router-outlet></router-outlet>
